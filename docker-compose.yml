@@ -16,7 +16,7 @@ services:
   seaweed-volume-1:
     image: chrislusf/seaweedfs:2.24_large_disk
     container_name: seaweed-volume-1
-    command: 'volume -mserver="seaweed-master:9333" -port=8080 -dataCenter=asagi -rack=hdd'
+    command: 'volume -mserver="seaweed-master:9333" -port=8080 -dataCenter=asagi -rack=hdd -max=16'
     stop_grace_period: 1m
     restart: always
     volumes:
